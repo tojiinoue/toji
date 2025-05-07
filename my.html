@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>自己紹介サイト</title>
+  <link rel="stylesheet" href="my.css">
+</head>
+<body>
+  <div class="container">
+    <h1>こんにちは！井上登司です</h1>
+    <img src="IMG_5436.jpg" alt="プロフィール写真" class="profile-img"
+    onmouseover="src='image.jpeg';"
+    onmouseout="src='IMG_5436.jpg'">
+    <p>埼玉出身の新卒エンジニアです。<br>趣味は映画鑑賞とサッカー観戦です。</p>
+    <p>将来は社会の課題をアプリで解決できるエンジニアになりたいです！</p>
+    <a href="mailto:touinoue@pasona.co.jp">メールはこちら</a>
+
+    <!-- <h1>BMI 判定</h1>
+    <form name="info" action="#">
+        身長：<input type="text" name="height" size="10">cm<br>
+        体重：<input type="text" name="weight" size="10">kg<br>
+        <input type="button" value="判定する" onclick="judge()">
+    </form> -->
+  </div>
+
+  <script>
+    function judge() {
+        hm = document.info.height.value / 100;
+        bmi = document.info.weight.value / (hm * hm);
+        if(bmi < 18.5) {
+            window.alert("あなたは痩せています");
+        }
+        else {
+            window.alert("あなたは痩せてはいません");
+        }
+    }
+  </script>
+</body>
+</html>
